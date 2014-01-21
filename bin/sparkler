@@ -168,7 +168,7 @@ def sparkler_cli():
     fig = matplotlib.pyplot.gcf()
     fig.set_size_inches(13.5, 8)
 
-    guid = hashlib.sha1(''.join(raw_values)).hexdigest()
+    guid = hashlib.sha1(''.join(raw_values).encode('utf-8')).hexdigest()
 
     file_name='./graph-' + guid + '.png'
 
